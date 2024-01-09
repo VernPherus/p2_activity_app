@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,17 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/users', [UserController::class, 'index'])->name('login');
+//Route::get('/users', 'App\Http\Controllers\UserController@index');
+
+Route::get('/users/{id}', [UserController::class, 'show']);
+
+
+//===================================================================
 // Route::get('/', function () {
 //     return view('welcome');
 // });
