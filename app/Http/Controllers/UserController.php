@@ -17,7 +17,7 @@ class UserController extends Controller
         //     "name" => "Nerve",
         //     "age" => 23,
         //     "email" => "nerve@gmail.com"
-        // );
+        // );g
 
         //function chaining
         return view('user')
